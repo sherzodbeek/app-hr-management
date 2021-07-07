@@ -30,20 +30,20 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-//        roleRepository.save(new Role(RoleName.ROLE_DIRECTOR));
-//        roleRepository.save(new Role(RoleName.ROLE_HR_MANAGER));
-//        roleRepository.save(new Role(RoleName.ROLE_STUFF));
-//
-//        taskStatusRepository.save(new TaskStatus(Status.NEW));
-//        taskStatusRepository.save(new TaskStatus(Status.IN_PROGRESS));
-//        taskStatusRepository.save(new TaskStatus(Status.COMPLETED));
-//        userRepository.save(new User(
-//            "Director",
-//                "admin",
-//                "sqlqueryjs@gmail.com",
-//                passwordEncoder.encode("123"),
-//                new HashSet<>(Collections.singletonList(roleRepository.findByRoleName(RoleName.ROLE_DIRECTOR))),
-//                true
-//        ));
+        roleRepository.save(new Role(RoleName.ROLE_DIRECTOR));
+        roleRepository.save(new Role(RoleName.ROLE_HR_MANAGER));
+        roleRepository.save(new Role(RoleName.ROLE_STUFF));
+
+        taskStatusRepository.save(new TaskStatus(Status.NEW));
+        taskStatusRepository.save(new TaskStatus(Status.IN_PROGRESS));
+        taskStatusRepository.save(new TaskStatus(Status.COMPLETED));
+        userRepository.save(new User(
+            "Director",
+                "admin",
+                "sqlqueryjs@gmail.com",
+                passwordEncoder.encode("123"),
+                new HashSet<>(Collections.singletonList(roleRepository.findByRoleName(RoleName.ROLE_DIRECTOR))),
+                true
+        ));
     }
 }
