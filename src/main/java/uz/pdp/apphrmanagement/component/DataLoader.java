@@ -40,7 +40,7 @@ public class DataLoader implements CommandLineRunner {
         userRepository.save(new User(
             "Director",
                 "admin",
-                "sqlqueryjs@gmail.com",
+                "admin@gmail.com",
                 passwordEncoder.encode("123"),
                 new HashSet<>(Collections.singletonList(roleRepository.findByRoleName(RoleName.ROLE_DIRECTOR))),
                 true
