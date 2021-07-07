@@ -110,7 +110,7 @@ public class StuffService {
     }
 
     public List<User> getStuffs() {
-        return userRepository.findAllByRoles(new HashSet<>(Collections.singletonList(new Role(RoleName.ROLE_STUFF))));
+        return userRepository.findAllByRolesIn(new HashSet<>(Collections.singletonList(new Role(RoleName.ROLE_STUFF))));
     }
 
     public ApiResponse getInfoStuff(GetInfoDto getInfoDto) {

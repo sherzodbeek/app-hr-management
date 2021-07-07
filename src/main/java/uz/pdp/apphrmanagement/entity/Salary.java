@@ -26,7 +26,7 @@ public class Salary {
     @ManyToOne
     private User user;
 
-    private boolean isGiven = false;
+    private boolean given = false;
 
     public Salary(double amount, Date date, User user) {
         this.amount = amount;
